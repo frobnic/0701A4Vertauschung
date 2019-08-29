@@ -1,8 +1,10 @@
-﻿namespace _0701A4Vertauschung
+﻿using System;
+
+namespace _0701A4Vertauschung
 {
     class Program
     {
-        static void schwapp(out int a, out int b)
+        static void schwapp(ref int a, ref int b)
         {
             int t;
 
@@ -18,9 +20,11 @@
         {
             int x = 7, y = 2;
 
-            schwapp(out x, out y);
+            Console.WriteLine("{0} {1}", x, y);
 
-            
+            schwapp(ref x, ref y);
+
+            Console.WriteLine("{0} {1}", x, y);
         }
     }
 }
